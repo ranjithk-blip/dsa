@@ -5,15 +5,14 @@ class Solution {
 
         while (left < right) {
 
-            // Skip non-alphanumeric characters from left
-            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) {
-                left++;
-            }
-
-            // Skip non-alphanumeric characters from right
-            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) {
-                right--;
-            }
+           while(left<right && !Character.isLetterOrDigit(s.charAt(left)))
+           {
+            left++;
+           }
+           
+           while(left<right && !Character.isLetterOrDigit(s.charAt(right))){
+            right--;
+           }
 
             // Compare characters ignoring case
             if (Character.toLowerCase(s.charAt(left)) !=
